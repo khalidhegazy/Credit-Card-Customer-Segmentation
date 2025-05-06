@@ -17,6 +17,8 @@ Dimensionality Reduction
 PCA: Reduced features to retain 90%+ variance (9 components)
 
 t-SNE: Used for 2D visualization of customer clusters
+![image](https://github.com/user-attachments/assets/e315a990-2435-4596-9287-4f1cf0d3773e)
+
 
 Clustering Methods
 KMeans Clustering
@@ -35,23 +37,23 @@ Cluster 2: Low Balance, Low Purchases, Low Cash Advance
 
 
 DBSCAN
-eps=2.5, min_samples=4 gave optimal performance with 4 clusters.
+eps=2.2, min_samples=4 gave optimal performance with 3 clusters.
 Segments:
 
-Cluster -1 (Noise/Outliers):
-Varied behavior with irregular or extreme values; unique combinations of balance, purchases, and cash advances.
+Cluster -1 (Noise/Outliers) : Irregular or Extreme Behavior
+These customers do not fit into the main clusters and may represent outliers. Their spending patterns are inconsistent—some may have unusually high or low balances, purchases, or cash advances.
 
-Cluster 0:
-Moderate Balance, Moderate Purchases, Moderate Cash Advance
-Balanced usage behavior with neither high nor low spending patterns.
 
-Cluster 1:
-Low Balance, Low Purchases, Low Cash Advance
-Low activity, minimal credit engagement.
+Cluster 0 : Moderate Balance, Low Purchases, High Cash Advance
+These customers maintain moderate credit balances but rely heavily on cash advances. They make fewer purchases, suggesting a preference for liquidity over regular spending.
 
-Cluster 2:
-High Balance, Low Purchases, High Cash Advance
-Preference for liquidity over transactional spending.
+
+Cluster 1 : Low Balance, High Purchases, Low Cash Advance
+These are active spenders with low balances. They frequently make purchases but rarely use cash advances, indicating a reliance on credit for transactions rather than cash withdrawals.
+
+![image](https://github.com/user-attachments/assets/49b4d229-c737-413d-98cd-3f5346ffe6a7)
+![image](https://github.com/user-attachments/assets/ff42cb8c-6576-4300-9d9f-65ad9854bc08)
+![image](https://github.com/user-attachments/assets/a3705cea-571f-461d-90f8-011b3cd018d5)
 
 
 
@@ -62,6 +64,10 @@ Captures soft cluster assignments (probabilistic)
 
 Visualization
 PCA 2D plots to visualize KMeans and DBSCAN clusters
+![image](https://github.com/user-attachments/assets/48fb3b58-b9db-4ab5-a66e-ba9d37c5d841)
+![image](https://github.com/user-attachments/assets/7533780e-282c-489c-ba95-f1f9474208b3)
+
+
 
 Boxplots showing feature distributions across clusters
 
